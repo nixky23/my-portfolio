@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IRAKOZE Nicky — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 9.5pt;
+    color: #1a1a2e;
+    background: #fff;
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 12mm 14mm 10mm 14mm;
+    background: #fff;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 2.5px solid #1d4ed8;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .header-name h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3px;
+    line-height: 1.1;
+  }
+  .header-name .title {
+    font-size: 10pt;
+    font-weight: 500;
+    color: #1d4ed8;
+    margin-top: 3px;
+    letter-spacing: 0.2px;
+  }
+  .header-contact {
+    text-align: right;
+    font-size: 8.5pt;
+    color: #374151;
+    line-height: 1.7;
+  }
+  .header-contact a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  .header-contact .location {
+    color: #6b7280;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-bottom: 13px;
+  }
+  .section-title {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #1d4ed8;
+    border-bottom: 1px solid #bfdbfe;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p {
+    color: #374151;
+    font-size: 9.5pt;
+    line-height: 1.55;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 20px;
+  }
+  .skill-row {
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+  }
+  .skill-label {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 8.5pt;
+    white-space: nowrap;
+    min-width: 130px;
+  }
+  .skill-values {
+    color: #374151;
+    font-size: 8.5pt;
+  }
+
+  /* ── EXPERIENCE / PROJECT ── */
+  .entry {
+    margin-bottom: 10px;
+  }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 1px;
+  }
+  .entry-title {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #0f172a;
+  }
+  .entry-subtitle {
+    font-weight: 600;
+    font-size: 8.5pt;
+    color: #1d4ed8;
+    margin-bottom: 1px;
+  }
+  .entry-meta {
+    font-size: 8pt;
+    color: #6b7280;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 3px;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding: 0px 5px;
+    margin-bottom: 3px;
+    letter-spacing: 0.3px;
+  }
+  .badge-green {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: #bbf7d0;
+  }
+  .badge-yellow {
+    background: #fefce8;
+    color: #a16207;
+    border-color: #fef08a;
+  }
+  ul.bullets {
+    padding-left: 13px;
+    margin-top: 3px;
+  }
+  ul.bullets li {
+    font-size: 9pt;
+    color: #374151;
+    margin-bottom: 2px;
+    line-height: 1.45;
+  }
+  ul.bullets li::marker {
+    color: #1d4ed8;
+  }
+  .tech-line {
+    margin-top: 4px;
+    font-size: 8pt;
+    color: #4b5563;
+  }
+  .tech-line strong {
+    color: #0f172a;
+  }
+  .project-link {
+    font-size: 8pt;
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  .placeholder {
+    color: #d97706;
+    font-style: italic;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .edu-left .degree {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #0f172a;
+  }
+  .edu-left .institution {
+    font-size: 8.5pt;
+    color: #1d4ed8;
+    font-weight: 600;
+  }
+  .edu-left .result {
+    font-size: 8pt;
+    color: #15803d;
+    font-weight: 600;
+    margin-top: 1px;
+  }
+  .edu-right {
+    font-size: 8pt;
+    color: #6b7280;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  /* ── LANGUAGES ── */
+  .lang-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 20px;
+    font-size: 9pt;
+    color: #374151;
+  }
+  .lang-level {
+    font-size: 8pt;
+    color: #6b7280;
+  }
+
+  /* ── FOOTER ── */
+  .cv-footer {
+    margin-top: 14px;
+    padding-top: 8px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 7.5pt;
+    color: #9ca3af;
+    text-align: center;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; padding: 12mm 14mm 10mm 14mm; }
+    a { color: #1d4ed8 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-name">
+        <h1>IRAKOZE Nicky</h1>
+        <div class="title">Software Engineer &nbsp;|&nbsp; Full-Stack Developer &nbsp;|&nbsp; Graphic Designer</div>
+      </div>
+      <div class="header-contact">
+        <div><a href="mailto:irakozenicky23@gmail.com">irakozenicky23@gmail.com</a></div>
+        <div><a href="https://github.com/nixky23">github.com/nixky23</a></div>
+        <div>+250 782 133 566</div>
+        <div class="location">Kicukiro, Kigali, Rwanda</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ PROFESSIONAL SUMMARY ══ -->
+  <section class="section summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Recent Software Engineering graduate from INES–Ruhengeri (B+, 2026) with practical internship experience in backend and full-stack web development at MasteryHub of Rwanda. Contributed to two real-world products — an e-commerce platform and a housing web application — gaining hands-on exposure to REST API development, database integration, and collaborative software delivery. Also a professional graphic designer proficient in Adobe Illustrator and Adobe Photoshop, with the ability to create engaging visual designs and graphic content. Passionate about building reliable, user-focused applications across web, mobile, and AI-powered domains. Eager to contribute to a software development team, continue learning, and grow into a well-rounded engineer.
+    </p>
+  </section>
+
+  <!-- ══ TECHNICAL SKILLS ══ -->
+  <section class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages:</span>
+        <span class="skill-values">Python, JavaScript, SQL, PHP, Dart</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frontend:</span>
+        <span class="skill-values">React, HTML/CSS, Tailwind CSS, Responsive Design</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Backend:</span>
+        <span class="skill-values">Python/Flask, REST API Development, Auth Concepts</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Mobile:</span>
+        <span class="skill-values">Flutter, Dart</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Databases:</span>
+        <span class="skill-values">PostgreSQL, SQLite, NeonDB, Relational DB Design</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tools &amp; Practices:</span>
+        <span class="skill-values">Git, GitHub, VS Code, API Testing, Agile Concepts</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Design Tools:</span>
+        <span class="skill-values">Adobe Illustrator, Adobe Photoshop, Graphic Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <!-- MasteryHub -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Backend Developer &amp; Full-Stack Development Intern</div>
+          <div class="entry-subtitle">MasteryHub of Rwanda</div>
+        </div>
+        <div class="entry-meta">March 2026 – June 2026 &nbsp;|&nbsp; Rwanda</div>
+      </div>
+      <ul class="bullets">
+        <li>Contributed to the backend development of <strong>Bobo eCommerce</strong>, a web platform for online sales of electronic devices, implementing REST API endpoints and integrating a PostgreSQL (NeonDB) database.</li>
+        <li>Participated in the development of <strong>HomeNow</strong>, a web application addressing housing and local community needs in Rwanda, working on both backend and full-stack feature implementation.</li>
+        <li>Developed and integrated application features, ensuring reliable communication between frontend and backend components across multiple projects.</li>
+        <li>Collaborated with team members in a structured development environment, participating in feature planning and code reviews.</li>
+        <li>Applied REST API design principles, user authentication concepts, and relational database management practices in a real-world team setting.</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> React, Python, PostgreSQL, NeonDB, REST API, JavaScript, Git</div>
+    </div>
+
+    <!-- Hardware Store -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Hardware Store Assistant</div>
+          <div class="entry-subtitle">Hardware Store — Gacuriro–Gisozi, Kigali</div>
+        </div>
+        <div class="entry-meta">March 2022 – June 2023 &nbsp;|&nbsp; Kigali, Rwanda</div>
+      </div>
+      <ul class="bullets">
+        <li>Assisted with day-to-day store operations including stock monitoring, inventory record-keeping, and customer service.</li>
+        <li>Demonstrated reliability, strong organizational skills, and the ability to manage responsibilities independently.</li>
+        <li>Developed communication and teamwork skills in a fast-paced customer-facing environment.</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section class="section">
+    <div class="section-title">Software Projects</div>
+
+    <!-- The Open Room -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="badge">Final Year Project</span>
+          <div class="entry-title">The Open Room — AI-Based Career Exploration Mobile App</div>
+        </div>
+        <a class="project-link" href="https://github.com/nixky23">github.com/nixky23</a>
+      </div>
+      <ul class="bullets">
+        <li>Designed and developed an AI-powered mobile application to help young people in Kigali, Rwanda explore career paths and make informed career decisions.</li>
+        <li>Built core features including a personality and skills self-assessment module, personalized career recommendations, and curated learning resources.</li>
+        <li>Integrated a Python/Flask backend to handle career-guidance logic and data management, with SQLite for local data storage.</li>
+        <li>Implemented a structured career-path exploration interface and job-readiness support content within the Flutter frontend.</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Flutter, Dart, Python, Flask, SQLite, REST API &nbsp;|&nbsp;
+        <span class="badge badge-yellow">In Progress</span>
+      </div>
+    </div>
+
+    <!-- Bobo eCommerce -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="badge">Internship Project</span>
+          <div class="entry-title">Bobo eCommerce — E-Commerce Platform for Electronic Devices</div>
+        </div>
+        <a class="project-link" href="https://github.com/nixky23">github.com/nixky23</a>
+      </div>
+      <ul class="bullets">
+        <li>Contributed as a backend and full-stack developer to a web platform enabling customers to browse, search, and purchase electronic devices online.</li>
+        <li>Implemented backend REST APIs for product management, user authentication, shopping cart, and checkout workflows.</li>
+        <li>Integrated a PostgreSQL database hosted on NeonDB for product listings, user accounts, and order management.</li>
+        <li>Supported frontend and backend integration to ensure consistent data flow across the application.</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> React, JavaScript, Python, PostgreSQL, NeonDB, REST API &nbsp;|&nbsp;
+        <span class="badge badge-green">Completed</span>
+      </div>
+    </div>
+
+    <!-- HomeNow -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="badge">Internship Project</span>
+          <div class="entry-title">HomeNow — Housing Information Web Application</div>
+        </div>
+        <a class="project-link" href="https://github.com/nixky23">github.com/nixky23</a>
+      </div>
+      <ul class="bullets">
+        <li>Contributed to a web application focused on housing and local community needs in Rwanda, aimed at improving access to housing-related information.</li>
+        <li>Worked on backend API development and full-stack feature implementation as part of the MasteryHub internship team.</li>
+        <li>Implemented user authentication, search and filter functionality, and database integration for housing content.</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> React, JavaScript, PostgreSQL, REST API &nbsp;|&nbsp;
+        <span class="badge badge-yellow">In Progress</span>
+      </div>
+    </div>
+
+    <!-- Catering Inventory -->
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <span class="badge">Personal Project</span>
+          <div class="entry-title">Catering Equipment Inventory &amp; Tracking Management System</div>
+        </div>
+        <a class="project-link" href="https://github.com/nixky23">github.com/nixky23</a>
+      </div>
+      <ul class="bullets">
+        <li>Designed and developed a business management system to help a catering company record, monitor, and track equipment entering and leaving storage.</li>
+        <li>Implemented equipment registration, event-based issue-and-return workflows, missing/broken item reporting, and inventory status reports.</li>
+        <li>Built user role management (storekeeper, admin) with accountability-focused workflows to reduce equipment losses.</li>
+        <li>Delivered a practical, non-technical-user-friendly interface with clear feedback for each operation.</li>
+      </ul>
+      <div class="tech-line"><strong>Technologies:</strong> Python, Flask, SQLite, HTML, CSS, JavaScript &nbsp;|&nbsp;
+        <span class="badge badge-green">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu-entry">
+      <div class="edu-left">
+        <div class="degree">Bachelor's Degree in Software Engineering</div>
+        <div class="institution">INES–Ruhengeri &nbsp;·&nbsp; Musanze, Rwanda</div>
+        <div class="result">Result: B+</div>
+      </div>
+      <div class="edu-right">Graduated: 2026</div>
+    </div>
+
+    <div class="edu-entry">
+      <div class="edu-left">
+        <div class="degree">High School Certificate — Software Development</div>
+        <div class="institution">Lycée de Kicukiro APADE &nbsp;·&nbsp; Kicukiro, Kigali</div>
+        <div class="result">Final-Year Aggregate: 32</div>
+      </div>
+      <div class="edu-right">Completed: 2022</div>
+    </div>
+  </section>
+
+  <!-- ══ LANGUAGES ══ -->
+  <section class="section">
+    <div class="section-title">Languages</div>
+    <span class="lang-row"><strong>Kinyarwanda</strong> <span class="lang-level">— Native</span></span>
+    <span class="lang-row"><strong>English</strong> <span class="lang-level">— Fluent</span></span>
+    <span class="lang-row"><strong>French</strong> <span class="lang-level">— Basic</span></span>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <div class="cv-footer">
+    References available on request &nbsp;·&nbsp; IRAKOZE Nicky &nbsp;·&nbsp; irakozenicky23@gmail.com &nbsp;·&nbsp; github.com/nixky23
+  </div>
+
+</div>
+</body>
+</html>
