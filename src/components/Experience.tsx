@@ -84,11 +84,7 @@ const Experience: React.FC = () => {
                     </div>
                   )}
 
-                  {exp.id === 'hardware-store' && (
-                    <p className="mt-3 text-xs text-yellow-600 dark:text-yellow-500/70 italic">
-                      📝 Date placeholder — update with actual start and end dates.
-                    </p>
-                  )}
+
                 </div>
               </div>
             ))}
