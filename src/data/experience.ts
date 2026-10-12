@@ -24,8 +24,8 @@ export const experiences: Experience[] = [
     title: 'Hardware Store Assistant',
     company: 'Hardware Store',
     location: 'Gacuriro–Gisozi, Kigali, Rwanda',
-    startDate: '[Year placeholder]',
-    endDate: '[Year placeholder]',
+    startDate: 'October 2022',
+    endDate: 'June 2023',
     type: 'other',
     description: [
       'Assisted with day-to-day store operations, including stock management and customer service.',

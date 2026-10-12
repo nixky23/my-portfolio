@@ -36,7 +36,7 @@ const experience = [
   {
     title: 'Hardware Store Assistant',
     company: 'Hardware Store — Gacuriro–Gisozi',
-    period: 'March 2022 – June 2023',
+    period: 'October 2022 – June 2023',
     location: 'Kigali, Rwanda',
     bullets: [
       'Assisted with day-to-day store operations including stock monitoring, inventory record-keeping, and customer service.',
